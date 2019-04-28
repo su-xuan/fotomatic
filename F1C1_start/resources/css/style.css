@@ -3,11 +3,15 @@
 html {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  display: block;
+  line-height: 1;
 }
 
 .main-content {
 
   top: 5.3125rem;
+  position: relative;
+
 
    /* To offset for fixed header. */
 }
@@ -28,6 +32,7 @@ html {
 
 .image-container img {
   display: block;
+  max-width: 100%;
 }
 
 @media only screen and (max-width: 760px) {
@@ -42,6 +47,7 @@ header {
 position: fixed;
 border-bottom: solid 1px #c6c1c1;
 width: 100%;
+z-index: 2;
 }
 
 header .content {
@@ -117,12 +123,15 @@ header .mobile ul {
 /* Sign Up Section */
 
 #sign-up-section {
-
-  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 43.5rem;
   background-image: url('../images/banner-landingpage.jpg');
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
+
 
 }
 
@@ -131,6 +140,10 @@ header .mobile ul {
   border: solid 1px #979797;
   border-radius: 4px;
   background-color: #9dc20b;
+  position: relative;
+  top: 171px;
+  bottom: 170px;
+  left: 100px;
 }
 
 #sign-up-cta .content {
@@ -236,6 +249,9 @@ header .mobile ul {
   margin: 0 auto;
 }
 
+.feature .content {
+  margin-top: 40px;
+}
 .feature h2 {
   padding-bottom: .5rem;
   font-size: 2.25rem;
@@ -301,6 +317,7 @@ header .mobile ul {
 }
 
 #filters-section .images-container {
+  display: flex;
   max-width: 100%;
   padding: 0 1%;
 }
@@ -341,11 +358,11 @@ header .mobile ul {
   background-color: #f3f3f3;
 }
 
-#quotes-section content {
+#quotes-section .content {
   padding: 5rem 0;
 }
 
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
   font-family: "Palatino", serif;
   font-size: 1.875rem;
@@ -354,21 +371,21 @@ header .mobile ul {
   color: #4a4a4a;
 }
 
-#quotes-section quote-citation {
+#quotes-section .quote-citation {
   height: 1.875rem;
 }
 
 @media only screen and (max-width: 760px) {
-  #quotes-section content {
+  #quotes-section .content {
     padding: 1.875rem .625rem;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
   }
 
-  #quotes-section quote-citation {
+  #quotes-section .quote-citation {
     display: block;
     padding-top: 1rem;
     margin: auto;
